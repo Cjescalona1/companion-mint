@@ -27,6 +27,13 @@ body{
     justify-content: center;
     
 }  
+#priceUWU, #priceUWUMATIC{
+    font-size: medium;
+    margin-top: -1em;
+}
+.prizes{
+    margin-top: 1.2em !important;
+}
 
 .paragraph{
     text-align: justify;
@@ -692,6 +699,13 @@ li > a > img{
     
 }
 @media screen and (max-width:768px) {
+    #priceUWU, #priceUWUMATIC{
+        font-size: medium;
+        margin-top: -1em;
+    }
+    .prizes{
+        margin-top: -1.2em !important;
+    }
     body{
         background-image: none;
     }
