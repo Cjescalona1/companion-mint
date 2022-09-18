@@ -516,9 +516,14 @@ li > a > img{
     margin-left: 8%;
     line-height: 2;
 }
+.A-opt{
+    margin-right: -50px;
+    margin-left: 70px;
+}
 
 
 @media screen and (min-width:768px) {
+
         nav{
             display: none;
         }
@@ -680,10 +685,27 @@ li > a > img{
 
      
 }
-@media screen and (max-width:768px) {
+@media screen and (max-height:668px) {
+    .row-top {
+        top: 0em !important ;
+    }
     
+}
+@media screen and (max-width:768px) {
+    body{
+        background-image: none;
+    }
     #WalletD, #Your_WeirdosD{
         display: none;
+    }
+    .A-opt{
+        margin-left: 2.5em !important;
+    }
+    .B-opt{
+        margin-left: 3em !important;
+    }
+    .mint-button{
+        width: 35vw !important;
     }
     .logo{
         width: 12em;
@@ -710,7 +732,7 @@ li > a > img{
     padding: 0.5em;
     }
     body{ 
-        background-image: url(res/fondo-mobile-05.jpg);
+       
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
@@ -751,13 +773,14 @@ li > a > img{
     .desktopClaim{
         display: none;
     }
-    .headerBar{
-        height: 2.4em;
-    }
+ 
     .container{
-        display: flex;
-        flex-direction: column;
-        margin: 1em 0em;
+    background-image: url(res/MAQUETA-WEB-02.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+    height: 100vh;
     }
     .weirdTrio{
         display: none;
@@ -769,6 +792,25 @@ li > a > img{
         width: 100%;
         text-align: center;
         margin-left: 2%;
+    }
+    .row-top{
+        width: 100vw;
+        left: -2em;
+        top: 1em;
+        position: relative;
+    }
+    .num-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5em;
+        left: -2em;
+        position: relative;
+        width: 52vw !important;
+    }
+    .disclaimer{
+        display: none !important;
     }
     .separator{
         display: none;
@@ -883,7 +925,7 @@ li > a > img{
     width: 9em;
     height: 3em;
     position: relative;
-    left: -6em;
+    left: 2em;
     top: -0.5em;
 }
 .muteMobile{
@@ -917,6 +959,10 @@ li > a > img{
 .stakedTitle{
     font-size: 1.5em;
     color: #6ecddd !important;
+}
+.devil>img {
+    left: 20%;
+    position: relative;
 }
 
 }
