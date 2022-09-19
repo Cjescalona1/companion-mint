@@ -1228,6 +1228,14 @@ li > a > img{
         height:580px;
 
     }
+    #MintA > div.col-12.center.num-group{
+        margin-top: 6em;
+    }
+    #priceUWU, #priceUWUMATIC {
+        font-size: larger !important;
+        
+    }
+    
     .leftBox{
           
         width: 35%;
