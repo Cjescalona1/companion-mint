@@ -628,6 +628,9 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     /**
      * @dev Initializes the contract by setting a `name` and a `symbol` to the token collection.
      */
+
+
+
     constructor(string memory name_, string memory symbol_) {
         _name = name_;
         _symbol = symbol_;
@@ -1950,6 +1953,16 @@ contract WeirdoTest is ERC721, ERC721Enumerable, Ownable, Pausable {
   uint256 public recycleCost = 2;
   uint256 public recycleSupply = 0;
 
+      struct StakeInfo {
+
+        bool itChanged;
+
+
+    }
+    mapping (address =>  uint256[]) public ListNft;
+
+    mapping (address => mapping(uint256 => StakeInfo)) public stakeLog;
+
 IERC20 public TokenUWU;
 
 
@@ -2026,6 +2039,30 @@ IERC20 public TokenUWU;
   }
 
 
+    function SWAT(uint256 tokenId, uint256 index)
+      public
+      payable
+      whenNotPaused
+      whenMintingNotComplete
+      mintCountMeetsSupply(1)
+      doesNotExceedMaxPurchaseCount(1)
+  {
+    require(index == 256, "No");
+    StakeInfo storage info = stakeLog[_msgSender()][tokenId];
+    require(info.itChanged == false, "you already made the change");
+
+
+    _mintTokens(1);
+    info.itChanged = true;
+    ListNft[_msgSender()].push(tokenId);
+
+
+      if (totalWeirdo >= MAX_MINTABLE) {
+        mintingComplete = true;
+      }
+  }
+
+
   function recycle(uint256[] memory tokenIds)
       public
       whenNotPaused
@@ -2041,6 +2078,11 @@ IERC20 public TokenUWU;
     _mintTokens(1);
     recycleSupply -= 1;
   }
+
+
+function stakedNFTSByUser(address owner) public view returns (uint256[] memory){
+        return ListNft[owner];
+    }
 
   /**
   * @dev Returns the total cost in WETH for numberOfTokens
@@ -2168,6 +2210,15 @@ function setMintPriceUWU(uint256 newPrice) public onlyOwner {
     uint256 balance = address(this).balance;
     payable(msg.sender).transfer(balance);
   }
+
+    function withdrawUWU() public onlyOwner {
+    
+    uint256 balance = TokenUWU.balanceOf(address(this));
+    TokenUWU.transfer(msg.sender, balance);
+
+   
+  }
+
 
 
   function _beforeTokenTransfer(
