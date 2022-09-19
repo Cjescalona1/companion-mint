@@ -528,8 +528,15 @@ li > a > img{
     margin-left: 70px;
 }
 
-
+@media screen and (min-width:768px) and (max-width:1250px) {
+    #MintA > div.col-12.center.num-group{
+        margin-top: 5.5em !important;
+    }
+}
 @media screen and (min-width:768px) {
+    #MintA > div.col-12.center.num-group{
+        margin-top: 5.5em !important;
+    }
 
         nav{
             display: none;
@@ -699,8 +706,12 @@ li > a > img{
     
 }
 @media screen and (max-width:768px) {
-    #priceUWU, #priceUWUMATIC{
-        font-size: medium;
+    #priceUWU{
+        font-size: large;
+        margin-top: -1em;
+    }
+    #priceUWUMATIC{
+        font-size: small;
         margin-top: -1em;
     }
     #priceMATIC{
