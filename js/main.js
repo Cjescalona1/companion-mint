@@ -600,12 +600,19 @@ async function loadAccount() {
 
         response.data.attributes.map(async result  =>{
 
+          if(result.trait_type == "IMP COMPANION" || result.trait_type == "SOUL COMPANION" || result.trait_type == "Companion"  ){
+            console.log("hola")
+             NftCompanio.push(response.data.edition)
 
-          es = await result.trait_type.indexOf('COMPANION')
-          if(es===5)(
-            //console.log(response.data.edition)
-            NftCompanio.push(response.data.edition)
-          )
+          }
+          // es = await result.trait_type.indexOf('COMPANION')
+          // console.log(es)
+          // console.log(response.data.edition)
+          // if(es>4){
+
+          // }
+
+          
         
 
 
@@ -623,49 +630,36 @@ async function loadAccount() {
  aum1()
 aum2()
 
-  let Todo = 0;
-console.log(balanceStake)
+
+
 
 if(NftCompanio.length > 0){
   console.log("puedes cambiar nft")
   if(balanceStake.length > 0){
   console.log("ya has cambiao nft")
 
-    for(let i = 0; i < NftCompanio.length; i++){
-
-  
-      for(let j = 0; j < balanceStake.length; j++){
-          
-          if(balanceStake[j] == NftCompanio[i]){
-            Todo = Todo + 1;
-              
-          }else{
-            NftxCambiar.push(NftCompanio[i])
-            
+        for( var i =NftCompanio.length - 1; i>=0; i--){
+          for( var j=0; j<balanceStake.length; j++){
+            if(NftCompanio[i] == balanceStake[j]){
+              NftCompanio.splice(i, 1);
+            }
           }
+        }
 
-  
-          
-          
-      }
-    }
-  }else{
-    console.log("aqui¡")
-    NftxCambiar.push( NftCompanio[0])
-  }
 
-  if(NftCompanio.length == Todo){
+  if(NftCompanio.length < 0){
     console.log("ya tienes todos los nft cambiados")
   }else{
-
+    NftxCambiar = []
     $("#MintA").hide();
     $("#mintSpecial").show();
-
+    NftxCambiar.push(NftCompanio[0])
     console.log(NftxCambiar)
   }
 
 }
 
+}
 }
 
 
