@@ -620,7 +620,8 @@ async function loadAccount() {
         console.log(error);
       });
   }
-
+ aum1()
+aum2()
 
   let Todo = 0;
 
@@ -810,11 +811,10 @@ var init2 = 0; //se inicializa una variable en 0
 function aum2() { // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
 
   var cantidad = document.getElementById('val2').value = ++init2; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
-  var p = (parseFloat((web3.utils.fromWei(priceMATICUWU) * 0.1) / 100) * parseFloat(cantidad))
-  var pbox1 = (parseFloat(web3.utils.fromWei(priceMATICUWU)) + p) * parseFloat(cantidad);
 
-  var p2 = (parseFloat((web3.utils.fromWei(priceUWU) * 0.1) / 100) * parseFloat(cantidad))
-  var pbox12= (parseFloat(web3.utils.fromWei(priceUWU)) + p) * parseFloat(cantidad);
+  var pbox1 = (parseFloat(web3.utils.fromWei(priceMATICUWU))) * parseFloat(cantidad);
+ 
+  var pbox12= (parseFloat(web3.utils.fromWei(priceUWU))) * parseFloat(cantidad);
 
 
 
@@ -830,9 +830,17 @@ function dis2() { // se crean la funcion y se agrega al evento onclick en en la 
     document.getElementById('val2').value = '00'
   } else {
     var cantidad = document.getElementById('val2').value = --init2; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
-
+    var pbox1 = (parseFloat(web3.utils.fromWei(priceMATICUWU))) * parseFloat(cantidad);
+ 
+    var pbox12= (parseFloat(web3.utils.fromWei(priceUWU))) * parseFloat(cantidad);
   
+  
+  
+    document.getElementById("priceUWUMATIC").textContent = pbox1.toFixed(2) + " $MATIC"
+    document.getElementById("priceUWU").textContent = pbox12.toFixed(2) + " $UWU"
   }
+  
+  
 }
 
 
@@ -841,8 +849,8 @@ var init1 = 0;
 function aum1() {
 
   var cantidad = document.getElementById('val1').value = ++init1; 
-  var p = (parseFloat((web3.utils.fromWei(PriceMatic) * 0.1) / 100) * parseFloat(cantidad))
-  var pbox1 = (parseFloat(web3.utils.fromWei(PriceMatic)) + p) * parseFloat(cantidad);
+ // var p = (parseFloat((web3.utils.fromWei(PriceMatic) * 0.1) / 100) * parseFloat(cantidad))
+  var pbox1 = (parseFloat(web3.utils.fromWei(PriceMatic))) * parseFloat(cantidad);
   document.getElementById("priceMATIC").textContent = pbox1.toFixed(2) + " $MATIC"
 
 
@@ -855,8 +863,8 @@ function dis1() {
 
   } else {
     var cantidad = document.getElementById('val1').value = --init1; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
-    var p = (parseFloat((web3.utils.fromWei(PriceMatic) * 0.1) / 100) * parseFloat(cantidad))
-    var pbox1 = (parseFloat(web3.utils.fromWei(PriceMatic)) + p) * parseFloat(cantidad);
+   // var p = (parseFloat((web3.utils.fromWei(PriceMatic) * 0.1) / 100) * parseFloat(cantidad))
+    var pbox1 = (parseFloat(web3.utils.fromWei(PriceMatic))) * parseFloat(cantidad);
     document.getElementById("priceMATIC").textContent = pbox1.toFixed(2) + " $MATIC"
   }
 }
