@@ -818,8 +818,8 @@ function aum2() { // se crean la funcion y se agrega al evento onclick en en la 
 
 
 
-  document.getElementById("priceUWUMATIC").textContent = pbox1.toFixed(4) + " $MATIC"
-  document.getElementById("priceUWU").textContent = pbox12.toFixed(4) + " $UWU"
+  document.getElementById("priceUWUMATIC").textContent = pbox1.toFixed(2) + " $MATIC"
+  document.getElementById("priceUWU").textContent = pbox12.toFixed(2) + " $UWU"
 
 
 }
