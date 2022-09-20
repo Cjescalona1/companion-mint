@@ -646,8 +646,9 @@ if(NftCompanio.length > 0){
           }
         }
 
+    console.log(NftCompanio.length)
 
-  if(NftCompanio.length < 0){
+  if(NftCompanio.length == 0){
     console.log("ya tienes todos los nft cambiados")
   }else{
     NftxCambiar = []
@@ -789,7 +790,7 @@ const mint3 = async () => {
 
   const result = await contract.methods.SWAT(NftxCambiar[0], 256)
     .send({ from: accounts[0] })
-    loadDapp()
+    location.reload();
  
     .catch((revertReason) => {
       getRevertReason(revertReason.receipt.transactionHash);
