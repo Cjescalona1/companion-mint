@@ -843,7 +843,7 @@ function aum1() {
   var cantidad = document.getElementById('val1').value = ++init1; 
   var p = (parseFloat((web3.utils.fromWei(PriceMatic) * 0.1) / 100) * parseFloat(cantidad))
   var pbox1 = (parseFloat(web3.utils.fromWei(PriceMatic)) + p) * parseFloat(cantidad);
-  document.getElementById("priceMATIC").textContent = pbox1.toFixed(4) + " $MATIC"
+  document.getElementById("priceMATIC").textContent = pbox1.toFixed(2) + " $MATIC"
 
 
 }
@@ -857,7 +857,7 @@ function dis1() {
     var cantidad = document.getElementById('val1').value = --init1; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
     var p = (parseFloat((web3.utils.fromWei(PriceMatic) * 0.1) / 100) * parseFloat(cantidad))
     var pbox1 = (parseFloat(web3.utils.fromWei(PriceMatic)) + p) * parseFloat(cantidad);
-    document.getElementById("priceMATIC").textContent = pbox1.toFixed(4) + " $MATIC"
+    document.getElementById("priceMATIC").textContent = pbox1.toFixed(2) + " $MATIC"
   }
 }
 
