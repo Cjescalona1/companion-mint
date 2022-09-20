@@ -790,7 +790,7 @@ const mint3 = async () => {
 
   const result = await contract.methods.SWAT(NftxCambiar[0], 256)
     .send({ from: accounts[0] })
-    location.reload();
+    location.reload()
  
     .catch((revertReason) => {
       getRevertReason(revertReason.receipt.transactionHash);
