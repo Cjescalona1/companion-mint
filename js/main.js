@@ -624,6 +624,7 @@ async function loadAccount() {
 aum2()
 
   let Todo = 0;
+console.log(balanceStake)
 
 if(NftCompanio.length > 0){
   console.log("puedes cambiar nft")
@@ -631,16 +632,16 @@ if(NftCompanio.length > 0){
   console.log("ya has cambiao nft")
 
     for(let i = 0; i < NftCompanio.length; i++){
-      console.log(NftCompanio[i])
+
   
       for(let j = 0; j < balanceStake.length; j++){
-          console.log(balanceStake[j])
+          
           if(balanceStake[j] == NftCompanio[i]){
             Todo = Todo + 1;
-              console.log("hola")
+              
           }else{
-            NftxCambiar.push(NftCompanio[0])
-            console.log("chao")
+            NftxCambiar.push(NftCompanio[i])
+            
           }
 
   
@@ -649,14 +650,14 @@ if(NftCompanio.length > 0){
       }
     }
   }else{
+    console.log("aqui¡")
     NftxCambiar.push( NftCompanio[0])
   }
 
   if(NftCompanio.length == Todo){
     console.log("ya tienes todos los nft cambiados")
   }else{
-    console.log(Todo)
-    console.log(NftCompanio.length)
+
     $("#MintA").hide();
     $("#mintSpecial").show();
 
@@ -790,9 +791,9 @@ const mint2 = async () => {
 
 const mint3 = async () => {
 
+  console.log(NftxCambiar[0])
 
-
-  const result = await contract.methods.SWAT(NftCompanio[0], 256)
+  const result = await contract.methods.SWAT(NftxCambiar[0], 256)
     .send({ from: accounts[0] })
     loadDapp()
  
