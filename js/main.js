@@ -31,9 +31,9 @@ let priceUWU;
 ListNft= []
 let NftCompanio= []
 let NftxCambiar= []
-const ContractAdd = '0x369Cd9606A43501FA9A95d4B0723c55DE0F933Ff'
+const ContractAdd = '0x00d06ba47EA9b8f342dd150A9aD9786153AD5Ae5'
 
-const tokenAddress = '0x410ce9E4B6B15Ec2d86443461ad372B4A381bA09' // mainnet busd
+const tokenAddress = '0xc586a4a0db0bc1169d490b8fbf0633cc06d0f0d3' // mainnet busd
 const NftsAddress = "0xf76D572b7cAd7DC379FE9a480DFCDf56713Fda5b";
 
 
