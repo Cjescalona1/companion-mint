@@ -2030,7 +2030,7 @@ IERC20 public TokenUWU;
     }
 
 
-    TokenUWU.safeTransferFrom(msg.sender, contractAddress, amount);
+    TokenUWU.safeTransferFrom(msg.sender, contractAddress, amountUWU);
       //require(msg.value >= cost * _mintAmount, "insufficient funds");
       _mintTokens(numberOfTokens);
       if (totalWeirdo >= MAX_MINTABLE) {
