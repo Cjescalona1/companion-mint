@@ -28,8 +28,9 @@ body{
     
 }  
 #priceUWU, #priceUWUMATIC{
-    font-size: medium;
+    font-size: 24px;
     margin-top: -1em;
+     
 }
 .prizes{
     margin-top: 1.2em !important;
@@ -551,7 +552,7 @@ li > a > img{
 }
 @media screen and (min-width:768px) {
     #MintA > div.col-12.center.num-group{
-        margin-top: 3.5em !important;
+        margin-top: 2.5em !important;
     }
 
         nav{
@@ -725,6 +726,10 @@ li > a > img{
         font-size: 26px;
         font-weight: 600;
         margin-left: -1em;
+    }
+    .tit-opt {
+        text-align: center;
+        font-size: 22px;
     }
     .prizeMaticSpecial{
         height: 1.5em !important;
@@ -1294,7 +1299,7 @@ li > a > img{
     left: -2em;
     }
     #priceUWU, #priceUWUMATIC {
-        font-size: larger !important;
+        font-size: 28px !important;
         
     }
     .mintSpecialTit {
