@@ -439,7 +439,7 @@ li > a > img{
 
 
 .mint-button{
-    background-color: #45ced4;
+    background-color: #db451e;
     color: antiquewhite;
     font-size: 1.5em;
     width: 6em;
@@ -492,8 +492,7 @@ li > a > img{
 .quant{
     font-size:3em;
 }
-.tit-opt{
-    font-size: calc(1.5em + 1.5vw);
+.tit-opt{ 
     text-align: center;
 
 }
@@ -531,8 +530,8 @@ li > a > img{
     margin-left: 8%;
     line-height: 2;
 }
-.A-opt{
-    margin-right: -50px;
+.A-opt {
+    margin-right: -15px;
     margin-left: 70px;
 }
 .mintSpecialTit{
@@ -543,12 +542,16 @@ li > a > img{
 
 @media screen and (min-width:768px) and (max-width:1250px) {
     #MintA > div.col-12.center.num-group{
-        margin-top: 5.5em !important;
+        margin-top: 3.5em !important;
+    }
+    .container{
+    top: -2.5em;
+    position: relative;
     }
 }
 @media screen and (min-width:768px) {
     #MintA > div.col-12.center.num-group{
-        margin-top: 5.5em !important;
+        margin-top: 3.5em !important;
     }
 
         nav{
@@ -708,8 +711,7 @@ li > a > img{
     transform:translate(-50%,50%) rotate(45deg);
     background-color:#EEEEEE;
     
-}
-
+} 
      
 }
 @media screen and (max-height:668px) {
@@ -737,7 +739,7 @@ li > a > img{
     }
     #priceMATIC{
         
-        height: 2.5em;
+        height: 1.2em;
     }
     .prizes{
         margin-top: -1.2em !important;
@@ -849,14 +851,17 @@ li > a > img{
         position: relative;
     }
     .num-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0.5em;
-        left: -2em;
-        position: relative;
-        width: 52vw !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+    left: -2em;
+    position: relative;
+    width: 52vw !important;
+    }
+    .SONG{
+    margin-top: 2.5em !important;
     }
     .num-groupB {
         display: flex;
@@ -1266,6 +1271,10 @@ li > a > img{
 
 
 @media  screen and (min-width: 1350px) and (max-width: 1850px)  {
+    .tit-opt {
+        font-size: 55px;
+        text-align: center;
+    }
     .container{
         height:580px;
 
@@ -1273,12 +1282,27 @@ li > a > img{
     #MintA > div.col-12.center.num-group{
         margin-top: 6em;
     }
+    #mintSpecial{
+        position: relative;
+        left: -2em;
+    }
     .num-groupB{
 
+    }
+    .B-opt{
+    position: relative;
+    left: -2em;
     }
     #priceUWU, #priceUWUMATIC {
         font-size: larger !important;
         
+    }
+    .mintSpecialTit {
+        font-size: 52px;
+        font-weight: 500;
+        margin-left: -1em;
+        position: relative;
+        left: 0.5em;
     }
     
     .leftBox{
@@ -1504,21 +1528,37 @@ li > a > img{
         height:780px;
 
     }
+    .tit-opt {
+        font-size: 55px;
+        text-align: center;
+    }
+    .B-opt{
+        position: relative;
+        left: -2em;
+        }
     .num-group {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 7em;
+        margin-top: 5em;
+    }
+    #priceUWU, #priceUWUMATIC {
+        font-size: larger !important;
+        
     }
     .num-groupB {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 7em;
+        margin-top: 2.5em;
     }
-    
+    .mintSpecialTit {
+        font-size: 52px;
+        font-weight: 500;
+        margin-left: -1em;
+    }
     .leftBox{
           
         width: 35%;
@@ -1719,6 +1759,13 @@ li > a > img{
 }
 
 @media  screen and (min-width: 2560px)  {
+    .tit-opt {
+        font-size: 55px;
+        text-align: center;
+    }
+    #priceUWU, #priceUWUMATIC {
+        font-size: larger !important;
+    }
     .container{
         height:780px;
 
