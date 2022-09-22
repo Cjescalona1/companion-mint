@@ -721,6 +721,11 @@ li > a > img{
     }
     
 }
+@media screen and (max-width: 500px) {
+    .container{
+        height: 100vh !important;
+        }
+}
 @media screen and (max-width:768px) {
     .mintSpecialTit {
         font-size: 26px;
